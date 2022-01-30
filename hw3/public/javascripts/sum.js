@@ -1,3 +1,4 @@
+// Tyler Uyeno
 // adds two integers together
 function sum(a, b) {
     return a + b;

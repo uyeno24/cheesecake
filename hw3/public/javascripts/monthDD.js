@@ -1,3 +1,4 @@
+// Tyler Uyeno
 //Makes dropdown open on hover and sets how many months are
 // shown at a time (4).
 $(function(){
