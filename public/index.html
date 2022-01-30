@@ -1,0 +1,113 @@
+<!-- Tyler Uyeno -->
+<!DOCTYPE html>
+<html>
+<head>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+ </script>
+<link rel="stylesheet" href="../public/stylesheets/style.css">
+</head>
+<body>
+<div id="form">
+  <!-- Title of the page -->
+  <h1>Cheesecake Order Form</h1>
+
+  <!-- Image of cheesecake -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Picture of Cheesecake"
+      width="200" 
+      height="200" />
+
+  <!-- Labels -->
+  <table id="part1">
+    <tr>
+        <th>Quantity</th>
+        <th>Topping</th>
+    </tr>
+    <tr>
+        <!-- Drop Down Menu -->
+        <td>
+          <select name="Quantity" id="Quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+        </td>
+
+        <!-- Three Options -->               
+        <td>
+          <input type="radio" id="plain" name="Topping" value="Plain">
+          <label for="plain">Plain</label><br>
+          <input type="radio" id="cherry" name="Topping" value="Cherry">
+          <label for="cherry">Cherry</label><br>
+          <input type="radio" id="chocolate" name="Topping" value="Chocolate">
+          <label for="chocolate">Chocolate</label>
+        </td>   
+    </tr>
+</table>
+
+  <!-- Textarea for special requests -->
+  <form>
+      <label for="notes">Notes:</label> <br>
+      <textarea id="notes" name="notes" rows="5" cols="50" placeholder="Enter any special instructions here."></textarea>
+  </form> <br>
+
+  <!-- Order button to comfirm your order -->
+  <button type="button" id="orderButton" onclick="">Order</button> <br>
+
+  <table id="part1">
+    <tr>
+        <!-- Label for the number of orders made for a certain month -->
+        <td>
+          <h3>Orders for</h3>
+        </td>
+
+        <!-- Dropdown to select the month -->               
+        <td>
+          <div class="dropdown"><select name="dropdown" id="selectMonth" class="form-control" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+            <option value="">Jan</option>
+            <option value="">Feb</option>
+            <option value="">Mar</option>
+            <option value="">Apr</option>
+            <option value="">May</option>
+            <option value="">Jun</option>
+            <option value="">Jul</option>
+            <option value="">Aug</option>
+            <option value="">Sep</option>
+            <option value="">Oct</option>
+            <option value="">Nov</option>
+            <option value="">Dec</option>
+        </select></div>
+        </td>   
+    </tr>
+</table>
+
+  <!-- List of last months orders -->
+  <ul>
+      <li>11 cherry</li>
+      <li>17 chocolate</li>
+      <li>31 plain</li>
+  </ul>
+
+</div>
+
+<!-- Order confermation / Thank you screen layout -->
+<div style="display: none;" id="thankYouScreen">
+  <h1>
+    Thank you! Your order has been placed.
+  </h1>
+
+  <h4 id="displayOrder"> </h4>
+
+  <h4 id="displayQuantity"> </h4>
+
+  <h4 id="extraNotes"> </h4>
+
+</div>
+
+<script src="javascripts/orderButton.js"></script>
+<script src="javascripts/monthDD.js"></script>
+
+</body>
+</html>
